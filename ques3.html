@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SRM Staff & Student Profiles</title>
+    <link rel="stylesheet" href="styles3.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/49/SRM_University_Logo.png"
+          alt="SRM Logo"
+          class="logo"
+        />
+        <div>
+          <h1>SRM Institute — Profiles</h1>
+          <p class="subtitle">
+            Staff & Student Records • Accommodation • Results • Honours
+          </p>
+        </div>
+      </div>
+      <nav class="header-controls">
+        <audio controls id="anthem" title="College anthem">
+          <source
+            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support audio.
+        </audio>
+      </nav>
+    </header>
+
+    <main class="container">
+      <!-- Tabs -->
+      <section class="tabs">
+        <input type="radio" name="tab" id="tab-staff" checked />
+        <input type="radio" name="tab" id="tab-students" />
+        <input type="radio" name="tab" id="tab-honour" />
+        <div class="tab-labels">
+          <label for="tab-staff" class="tab-label">Staff Details</label>
+          <label for="tab-students" class="tab-label">Students</label>
+          <label for="tab-honour" class="tab-label">Honouring</label>
+        </div>
+
+        <!-- STAFF -->
+        <section class="tab-panel staff-panel">
+          <h2>Staff Details</h2>
+
+          <article class="profile-card staff">
+            <img
+              class="profile-photo"
+              src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=500"
+              alt="Staff Photo"
+            />
+            <div class="profile-info">
+              <h3>Dr. Meera Subramanian</h3>
+              <p class="role">Associate Professor — Computer Science</p>
+              <p><strong>Email:</strong> m.subramanian@srm.edu</p>
+              <p><strong>Phone:</strong> +91 98XXXXXXXX</p>
+              <p class="bio">
+                Research: Distributed Systems, Cloud Computing. Teaching since
+                2012.
+              </p>
+              <div class="staff-actions">
+                <button class="btn">View CV</button>
+                <button class="btn ghost">Send Message</button>
+              </div>
+            </div>
+          </article>
+
+          <div class="grid staff-grid">
+            <article class="mini-card">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300"
+                alt="Mr. S. Jay"
+              />
+              <div>
+                <h4>Mr. S. Jay</h4>
+                <small>Lab Asst — Electronics</small>
+              </div>
+            </article>
+            <article class="mini-card">
+              <img
+                src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=300"
+                alt="Ms. Kavita P"
+              />
+              <div>
+                <h4>Ms. Kavita P</h4>
+                <small>Office Admin</small>
+              </div>
+            </article>
+            <article class="mini-card">
+              <img
+                src="https://images.unsplash.com/photo-1581090700227-4c4f50b1d5c3?w=300"
+                alt="Dr. Anil Rao"
+              />
+              <div>
+                <h4>Dr. Anil Rao</h4>
+                <small>Professor — Maths</small>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- STUDENTS -->
+        <section class="tab-panel students-panel">
+          <h2>Students Details</h2>
+
+          <article class="profile-card student">
+            <img
+              class="profile-photo"
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500"
+              alt="Student Photo"
+            />
+            <div class="profile-info">
+              <h3>Asha Rani</h3>
+              <p class="role">
+                B.Tech CSE • Roll: <span class="roll">RA2311003011</span>
+              </p>
+              <p><strong>Email:</strong> asha.rani23@srm.edu</p>
+
+              <div class="subsection">
+                <h4>Accommodation</h4>
+                <p><strong>Type:</strong> Hostel — Girls</p>
+                <p>
+                  <strong>Block:</strong> MBlock (Meenakshi / ESQ / KC available
+                  for girls)
+                </p>
+                <p><strong>Room:</strong> M-Block / Floor 3 / Room 312</p>
+              </div>
+
+              <div class="subsection">
+                <h4>Education</h4>
+                <ul class="education-list">
+                  <li>12th: CBSE — 94%</li>
+                  <li>10th: CBSE — 95%</li>
+                </ul>
+              </div>
+
+              <div class="subsection">
+                <h4>Results</h4>
+                <table class="results">
+                  <thead>
+                    <tr>
+                      <th>Sem</th>
+                      <th>SGPA</th>
+                      <th>Year</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>9.1</td>
+                      <td>2023</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>9.3</td>
+                      <td>2024</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+
+          <section class="accom-types">
+            <h3>Accommodation rules & examples</h3>
+            <ul>
+              <li>
+                Girls hostels: <strong>MBlock, KC, Meenakshi, ESQ</strong>
+              </li>
+              <li>Boys hostels: <strong>URI, Adhayman</strong></li>
+              <li>
+                If not in hostel: <strong>PG</strong> or <strong>Flat</strong>
+              </li>
+              <li>Roll numbers follow format: <code>RA2311003011---</code></li>
+            </ul>
+          </section>
+
+          <div class="table-wrap">
+            <table class="student-table">
+              <thead>
+                <tr>
+                  <th>Roll</th>
+                  <th>Name</th>
+                  <th>Accom</th>
+                  <th>Course</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>RA2311003011001</td>
+                  <td>Rahul Kumar</td>
+                  <td>URI (Boys Hostel)</td>
+                  <td>B.Tech ME</td>
+                  <td><button class="btn small">Details</button></td>
+                </tr>
+                <tr>
+                  <td>RA2311003011002</td>
+                  <td>Meenakshi S</td>
+                  <td>MBlock (Girls)</td>
+                  <td>B.Sc</td>
+                  <td><button class="btn small">Details</button></td>
+                </tr>
+                <tr>
+                  <td>RA2311003011003</td>
+                  <td>Priya N</td>
+                  <td>PG</td>
+                  <td>B.Com</td>
+                  <td><button class="btn small">Details</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- HONOURING -->
+        <section class="tab-panel honour-panel">
+          <h2>Honouring / Tribute</h2>
+
+          <article class="honour-card">
+            <canvas id="honour-canvas" width="400" height="140"></canvas>
+            <div class="honour-content">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/9/99/Stephen_Hawking.StarChild.jpg"
+                alt="Honoree Photo"
+              />
+              <h3>Prof. A. K. Raman — Lifetime Achievement</h3>
+              <p class="honour-text">
+                For outstanding contribution to science & mentorship.
+              </p>
+
+              <video controls width="360">
+                <source
+                  src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support video.
+              </video>
+
+              <div class="honour-actions">
+                <button class="btn">Download Certificate</button>
+                <button class="btn ghost">Share</button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> SRM Institute • Profiles system</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      (function drawBadge() {
+        const c = document.getElementById("honour-canvas");
+        if (!c) return;
+        const ctx = c.getContext("2d");
+        const grad = ctx.createLinearGradient(0, 0, c.width, 0);
+        grad.addColorStop(0, "#FFD166");
+        grad.addColorStop(1, "#EF476F");
+        ctx.fillStyle = grad;
+        roundRect(ctx, 0, 0, c.width, c.height, 10, true, false);
+        ctx.fillStyle = "#fff";
+        ctx.font = "20px Arial";
+        ctx.fillText("Honour & Tribute", 20, 40);
+        ctx.font = "14px Arial";
+        ctx.fillText("Presented to:", 20, 70);
+        ctx.font = "bold 16px Arial";
+        ctx.fillText("Prof. A. K. Raman", 20, 95);
+
+        function roundRect(ctx, x, y, w, h, r, fill, stroke) {
+          if (typeof stroke === "undefined") {
+            stroke = true;
+          }
+          if (typeof r === "undefined") {
+            r = 5;
+          }
+          ctx.beginPath();
+          ctx.moveTo(x + r, y);
+          ctx.arcTo(x + w, y, x + w, y + h, r);
+          ctx.arcTo(x + w, y + h, x, y + h, r);
+          ctx.arcTo(x, y + h, x, y, r);
+          ctx.arcTo(x, y, x + w, y, r);
+          ctx.closePath();
+          if (fill) ctx.fill();
+          if (stroke) ctx.stroke();
+        }
+      })();
+    </script>
+  </body>
+</html>

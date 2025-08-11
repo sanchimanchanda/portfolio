@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .container {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        width: 320px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-in-out;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Toggle Tabs */
+      .tabs {
+        display: flex;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #ddd;
+      }
+      .tab {
+        flex: 1;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
+        color: #555;
+        transition: background 0.3s, color 0.3s;
+      }
+      input[type="radio"] {
+        display: none;
+      }
+      #loginTab:checked ~ .tabs label[for="loginTab"],
+      #signupTab:checked ~ .tabs label[for="signupTab"] {
+        color: #2575fc;
+        border-bottom: 2px solid #2575fc;
+      }
+
+      /* Forms */
+      form {
+        display: none;
+        animation: slideUp 0.5s ease;
+      }
+      #loginTab:checked ~ form.login,
+      #signupTab:checked ~ form.signup {
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 0.7rem;
+        margin: 0.5rem 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+      input:focus {
+        border-color: #2575fc;
+      }
+
+      button {
+        width: 100%;
+        padding: 0.7rem;
+        background: #2575fc;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #1a5cd8;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes slideUp {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Toggle -->
+      <input type="radio" id="loginTab" name="tab" checked />
+      <input type="radio" id="signupTab" name="tab" />
+
+      <div class="tabs">
+        <label for="loginTab" class="tab">Login</label>
+        <label for="signupTab" class="tab">Signup</label>
+      </div>
+
+      <!-- Login Form -->
+      <form class="login">
+        <input type="text" placeholder="Username" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <!-- Signup Form -->
+      <form class="signup">
+        <input type="text" placeholder="Username" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </body>
+</html>
